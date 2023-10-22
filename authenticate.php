@@ -17,7 +17,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         if (password_verify($password, $stored_password)) {
             // User authenticated, store user ID in the session and redirect to the dashboard
-            $_SESSION['user_id'] = $row['user_id'];
+            $_SESSION['id'] = $row['id'];
             header("Location: dashboard.php");
             exit();
         } else {

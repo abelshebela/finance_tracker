@@ -2,7 +2,7 @@
 session_start(); // Start the PHP session
 
 // Check if the user is logged in
-if (!isset($_SESSION['user_id'])) {
+if (!isset($_SESSION['id'])) {
     // Redirect to the login page or handle unauthorized access
     header("Location: index.php");
     exit;

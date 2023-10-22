@@ -1,8 +1,5 @@
-
 <?php
 session_start(); // Start the PHP session
-
-include 'db.php';
 
 // Check if the user is logged in
 if (!isset($_SESSION['user_id'])) {
@@ -11,16 +8,7 @@ if (!isset($_SESSION['user_id'])) {
     exit;
 }
 
-// Get the user ID from the session
-$user_id = $_SESSION['user_id'];
-
-// Now, fetch user-specific income data (you will need to adjust the SQL query)
-//$sql_income = "SELECT * FROM income WHERE user_id = $user_id";
-//$result_income = mysqli_query($conn, $sql_income);
-
-// Fetch user-specific expense data
-//$sql_expense = "SELECT * FROM expense WHERE user_id = $user_id";
-//$result_expense = mysqli_query($conn, $sql_expense);
+// User is authenticated; you can display the dashboard content here
 ?>
 
 <!DOCTYPE html>

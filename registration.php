@@ -1,5 +1,5 @@
 <?php
-include 'db.php';
+include 'includes/db.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $first_name = $_POST["first_name"];
@@ -31,10 +31,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 </head>
 <body>
-    <div class="container">
+    <div class="container mt-2">
         <div class="row">
             <div class="col-md-6 offset-md-3">
-                <h1>Registration</h1>
+                <h2>Registration</h2>
                 <form method="POST" action="registration.php" enctype="multipart/form-data">
                     <div class="form-group">
                         <label for="first_name">First Name</label>

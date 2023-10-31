@@ -1,0 +1,43 @@
+name: Export and Import MySQL Database
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  export-import-database:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up MySQL client
+      run: |
+        sudo apt-get install mysql-client
+      continue-on-error: true
+
+    - name: Export local MySQL database
+      env:
+        LOCAL_MYSQL_HOST: DESKTOP-55K5Q8Q
+        LOCAL_MYSQL_USERNAME: abbk
+        LOCAL_MYSQL_PASSWORD: abbk@2023
+        LOCAL_DATABASE_NAME: finance_tracker.sql
+      run: |
+        mysqldump -h$LOCAL_MYSQL_HOST -u$LOCAL_MYSQL_USERNAME -p$LOCAL_MYSQL_PASSWORD $LOCAL_DATABASE_NAME > dump.sql
+      continue-on-error: true
+
+    - name: Set up Azure MySQL client
+      run: |
+        sudo apt-get install mysql-client
+      continue-on-error: true
+
+    - name: Import into Azure MySQL database
+      env:
+        AZURE_MYSQL_HOST: project-phase2.mysql.database.azure.com
+        AZURE_MYSQL_USERNAME: projectphase2
+        AZURE_MYSQL_PASSWORD: Nedamcoacademy2
+        AZURE_DATABASE_NAME: finance-tracker
+      run: |
+        mysql -h$AZURE_MYSQL_HOST -u$AZURE_MYSQL_USERNAME -p$AZURE_MYSQL_PASSWORD $AZURE_DATABASE_NAME < dump.sql

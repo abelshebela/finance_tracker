@@ -6,7 +6,8 @@ include 'includes/db.php';
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST["email"];
     $password = $_POST["password"];
-
+    
+    echo "login clicked";
     // Replace the query with one that retrieves user data based on the provided email
     $sql = "SELECT * FROM users WHERE email = '$email'";
     $result = $conn->query($sql);

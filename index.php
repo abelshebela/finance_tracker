@@ -13,7 +13,7 @@ include 'includes/db.php';
         <div class="row">
             <div class="col-md-6 offset-md-3">
                 <h2 class="text-center">Login</h2>
-                <form method="POST" action="includes/authenticate.php">
+                <form method="POST" action="authenticate.php">
                     <div class="form-group">
                         <label for="email">Email</label>
                         <input type="email" class="form-control" name="email" id="email" required>

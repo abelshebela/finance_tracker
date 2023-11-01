@@ -43,7 +43,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </head>
 <body>
     <header>
-        <?php include 'nav.php' ?>
+        <?php include 'nav.php'; ?>
     </header>
     <div class="container">
         <h2 class="mt-5">Add Income</h2>

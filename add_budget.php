@@ -47,7 +47,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
-    <?php include 'nav.php'?>
+    <?php include 'nav.php'; ?>
     <div class="container">
         <div class="row">
             <div class="col-md-6">

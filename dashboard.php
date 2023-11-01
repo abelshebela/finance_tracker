@@ -102,7 +102,7 @@ foreach (array_keys($incomeData) as $key) {
 </head>
 <body>
     <header>
-        <?php include 'nav.php' ?>
+        <?php include 'nav.php'; ?>
     </header>
     <div class="container mt-5">
 

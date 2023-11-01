@@ -1,7 +1,7 @@
 <?php
 session_start(); // Start the PHP session
 
-include '../includes/db.php';
+include 'includes/db.php';
 
 // Check if the user is logged in
 if (!isset($_SESSION['id'])) {
@@ -60,7 +60,7 @@ if (isset($_GET['id'])) {
 </head>
 <body>
     <header>
-        <?php include '../includes/nav.php'?>
+        <?php include 'includes/nav.php'?>
     </header>
     <div class="container">
         <div class="row">

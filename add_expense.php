@@ -1,6 +1,6 @@
 <?php
 session_start(); // Start the PHP session
-include '../includes/db.php'; // Include your database connection code
+include 'includes/db.php'; // Include your database connection code
 
 if (!isset($_SESSION['id'])) {
     // Redirect to the login page if the user is not logged in
@@ -83,7 +83,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
-    <?php include '../includes/nav.php' ?>
+    <?php include 'includes/nav.php' ?>
     <div class="container">
         <h2 class="mt-5">Add Expense</h2>
         <form action="add_expense.php" method="POST">

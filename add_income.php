@@ -7,7 +7,7 @@ if (!isset($_SESSION['id'])) {
     exit;
 }
 
-include '../includes/db.php';
+include 'includes/db.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $user_id = $_SESSION['id'];
@@ -43,7 +43,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </head>
 <body>
     <header>
-        <?php include '../includes/nav.php' ?>
+        <?php include 'includes/nav.php' ?>
     </header>
     <div class="container">
         <h2 class="mt-5">Add Income</h2>

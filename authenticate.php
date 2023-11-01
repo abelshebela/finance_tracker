@@ -1,7 +1,7 @@
 <?php
 session_start(); // Start a PHP session
 
-include 'db.php';
+include 'includes/db.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST["email"];
@@ -18,16 +18,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if (password_verify($password, $stored_password)) {
             // User authenticated, store user ID in the session and redirect to the dashboard
             $_SESSION['id'] = $row['id'];
-            header("Location: ../dashboard.php");
+            header("Location: dashboard.php");
             exit();
         } else {
             // Authentication failed, show an error message
-            header("Location: ..//index.php?error=1"); // Redirect to login page with error code
+            header("Location: index.php?error=1"); // Redirect to login page with error code
             exit();
         }
     } else {
         // User not found, show an error message
-        header("Location: ../index.php?error=1"); // Redirect to login page with error code
+        header("Location: index.php?error=1"); // Redirect to login page with error code
         exit();
     }
 }

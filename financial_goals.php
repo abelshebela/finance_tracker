@@ -1,6 +1,6 @@
     <?php
     session_start(); // Start the PHP session
-    include '../includes/db.php'; // Include your database connection code
+    include 'includes/db.php'; // Include your database connection code
 
     // Check if the user is logged in
     if (!isset($_SESSION['id'])) {
@@ -40,7 +40,7 @@
    </head>
    <body>
     <header>
-        <?php include '../includes/nav.php' ?>
+        <?php include 'includes/nav.php' ?>
     </header>
     <div class="container mt-4">
     <!-- Add Goal Form -->

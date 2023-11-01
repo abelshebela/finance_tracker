@@ -1,20 +1,20 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="/finance_tracker/dashboard">Finance Tracker</a>
+    <a class="navbar-brand" href="dashboard.php">Finance Tracker</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav navbar-nav ml-auto">
             <li class="nav-item active">
-                <a class="nav-link" href="/finance_tracker/dashboard">Dashboard</a>
+                <a class="nav-link" href="dashboard.php">Dashboard</a>
             </li>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="transactionsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Budget
                 </a>
                 <div class="dropdown-menu" aria-labelledby="transactionsDropdown">
-                    <a class="dropdown-item" href="/finance_tracker/budget/add_budget">Add Budget</a>
-                    <a class="dropdown-item" href="/finance_tracker/budget/view_budget">View Budgets</a>
+                    <a class="dropdown-item" href="add_budget.php">Add Budget</a>
+                    <a class="dropdown-item" href="view_budget.php">View Budgets</a>
                 </div>
             </li>
             <li class="nav-item dropdown">
@@ -22,23 +22,23 @@
                     Transactions
                 </a>
                 <div class="dropdown-menu" aria-labelledby="transactionsDropdown">
-                    <a class="dropdown-item" href="/finance_tracker/transaction/add_income">Add Income</a>
-                    <a class="dropdown-item" href="/finance_tracker/transaction/add_expense">Add Expense</a>
-                    <a class="dropdown-item" href="/finance_tracker/transaction/view_transactions">View Transactions</a>
+                    <a class="dropdown-item" href="add_income.php">Add Income</a>
+                    <a class="dropdown-item" href="add_expense.php">Add Expense</a>
+                    <a class="dropdown-item" href="view_transactions.php">View Transactions</a>
                 </div>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/finance_tracker/goal/financial_goals">Financial Goals</a>
+                <a class="nav-link" href="financial_goals.php">Financial Goals</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/finance_tracker/profile">User Profile</a>
+                <a class="nav-link" href="profile.php">User Profile</a>
             </li>
             <li class="nav-item">
-               <a class="nav-link" href="/finance_tracker/notification">Notifications</a>
+               <a class="nav-link" href="notification.php">Notifications</a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="logout">Logout</a>
+                <a class="nav-link" href="logout.php">Logout</a>
             </li>
         </ul>
     </div>

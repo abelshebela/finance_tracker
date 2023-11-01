@@ -9,6 +9,6 @@ $_SESSION = array();
 session_destroy();
 
 // Redirect to the login page or any other page as needed
-header("Location: ../finance_tracker/index.php");
+header("Location: index.php");
 exit();
 ?>

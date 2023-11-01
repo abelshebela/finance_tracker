@@ -1,6 +1,7 @@
 <?php
 session_start();
 
+include 'includes/db.php';
 // Check if the user is logged in
 if (isset($_SESSION['id'])) {
     $userID = $_SESSION['id'];

@@ -1,3 +1,33 @@
+
+<?php
+session_start(); // Start a PHP session
+
+include 'includes/db.php';
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $first_name = $_POST["first_name"];
+    $last_name = $_POST["last_name"];
+    $email = $_POST["email"];
+    $password = password_hash($_POST["password"], PASSWORD_BCRYPT);
+    $phone_number = $_POST["phone_number"];
+    $address = $_POST["address"];
+    $date_of_birth = $_POST["date_of_birth"];
+    $gender = $_POST["gender"];
+
+
+    $sql = "INSERT INTO users (first_name, last_name, email, password, phone_number, address, date_of_birth, gender) 
+            VALUES ('$first_name', '$last_name', '$email', '$password', '$phone_number', '$address', '$date_of_birth', '$gender')";
+    
+    if ($conn->query($sql) === true) {
+        echo "Registration successful. You can now <a href='index.php'>login</a>.";
+    } else {
+        echo "Error: " . $sql . "<br>" . $conn->error;
+    }
+
+    $conn->close();
+}
+?>
+
 <!DOCTYPE html>
 <html>
 <head>

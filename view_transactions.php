@@ -35,7 +35,7 @@ $expense_result = $expense_stmt->get_result();
 </head>
 <body>
     <header>
-        <?php include 'nav.php' ?>
+        <?php include 'nav.php'; ?>
     </header>
     <div class="container">
 

@@ -28,7 +28,7 @@ $result = mysqli_query($conn, $sql);
 </head>
 <body>
     <header>
-        <?php include 'nav.php' ?>
+        <?php include 'nav.php'; ?>
     </header>
     <div class="container mt-4">
         <h1 class="mb-4">Notifications</h1>

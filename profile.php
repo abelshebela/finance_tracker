@@ -34,7 +34,7 @@ if (isset($_SESSION['id'])) {
     </head>
     <body>
         <header>
-            <?php include 'nav.php';?>
+            <?php include 'nav.php'; ?>
         </header>
     <div class="container mt-3">
         <!-- Display database info of the user -->

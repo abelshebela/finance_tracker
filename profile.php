@@ -6,14 +6,6 @@ include 'includes/db.php';
 if (isset($_SESSION['id'])) {
     $userID = $_SESSION['id'];
 
-    $host = "localhost"; // Typically 'localhost'
-    $username = "root";
-    $password = "";
-    $database = "finance_tracker";
-
-    // Create a database connection
-    $conn = new mysqli($host, $username, $password, $database);
-
     // Fetch user profile from the database
     $sql = "SELECT * FROM users WHERE id = ?";
     $stmt = $conn->prepare($sql);
@@ -21,8 +13,6 @@ if (isset($_SESSION['id'])) {
     $stmt->execute();
     $user = $stmt->get_result()->fetch_assoc();
 
-    // Close the database connection
-    $conn->close();
  ?>
 
     <!DOCTYPE html>

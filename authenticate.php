@@ -4,9 +4,7 @@ session_start(); // Start a PHP session
 include 'includes/db.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    
-    echo "login clicked";
-    
+   
     $email = $_POST["email"];
     $password = $_POST["password"];
     

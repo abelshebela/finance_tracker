@@ -1,5 +1,5 @@
 <?php
-<?php
+
 $server = "project-phase2.mysql.database.azure.com"; // Your local MySQL server hostname
 $username = "projectphase2"; // Your local MySQL server username
 $password = "Nedamcoacademy2"; // Your local MySQL server password

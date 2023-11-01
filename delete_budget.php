@@ -60,7 +60,7 @@ if (isset($_GET['id'])) {
 </head>
 <body>
     <header>
-        <?php include 'includes/nav.php'?>
+        <?php include 'nav.php'?>
     </header>
     <div class="container">
         <div class="row">

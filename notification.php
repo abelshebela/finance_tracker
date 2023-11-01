@@ -28,7 +28,7 @@ $result = mysqli_query($conn, $sql);
 </head>
 <body>
     <header>
-        <?php include 'includes/nav.php' ?>
+        <?php include 'nav.php' ?>
     </header>
     <div class="container mt-4">
         <h1 class="mb-4">Notifications</h1>
@@ -93,7 +93,6 @@ $result = mysqli_query($conn, $sql);
             </div>
         </div>
     </div>
-
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>

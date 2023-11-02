@@ -12,8 +12,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $gender = $_POST["gender"];
 
 
-    $sql = "INSERT INTO users (first_name, last_name, email, password, phone_number, address, date_of_birth, gender) "
-            VALUES ('$first_name', '$last_name', '$email', '$password', '$phone_number', '$address', '$date_of_birth', '$gender')";
+    $sql = "INSERT INTO users (first_name, last_name, email, password, phone_number, address, date_of_birth, gender)
+            VALUES ($first_name, $last_name, $email, $password, $phone_number, $address, $date_of_birth, $gender)";
     
     if ($conn->query($sql) === true) {
         echo "Registration successful. You can now <a href='index.php'>login</a>.";

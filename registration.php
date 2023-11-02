@@ -15,24 +15,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (empty($first_name) || empty($last_name) || empty($email) || empty($password)) {
         echo "Error: Please fill in all required fields.";
     } else {
-        // SQL injection prevention: Use prepared statements
-        $stmt = $conn->prepare("INSERT INTO users (first_name, last_name, email, password, phone_number, address, date_of_birth, gender) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
+        $sql = "INSERT INTO users (first_name, last_name, email, password, phone_number, address, date_of_birth, gender)
+                VALUES ('$first_name', '$last_name', '$email', '$password', '$phone_number', '$address', '$date_of_birth', '$gender')";
 
-        if ($stmt) {
-            $stmt->bind_param("ssssssss", $first_name, $last_name, $email, $password, $phone_number, $address, $date_of_birth, $gender);
-            if ($stmt->execute()) {
-                echo "Registration successful. You can now <a href='index.php'>login</a>.";
-            } else {
-                echo "Error: Registration failed.";
-            }
-            $stmt->close();
+        if ($conn->query($sql) === true) {
+            echo "Registration successful. You can now <a href='index.php'>login</a>.";
         } else {
-            echo "Error: Prepare statement failed.";
+            echo "Error: Registration failed. Details: " . $conn->error;
         }
     }
 }
 ?>
-
 
 <!DOCTYPE html>
 <html>
